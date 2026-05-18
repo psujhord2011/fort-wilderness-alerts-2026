@@ -11,8 +11,13 @@ import os
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SMTP_USERNAME = os.environ["SMTP_USERNAME"]
-SMTP_PASSWORD = os.environ["SMTP_PASSWORD"]
+SMTP_USERNAME = os.getenv("SMTP_USERNAME")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+
+if not SMTP_USERNAME:
+    raise ValueError("SMTP_USERNAME secret is missing")
+if not SMTP_PASSWORD:
+    raise ValueError("SMTP_PASSWORD secret is missing")
 
 EMAIL_TO = "3016978093@txt.att.net"
 EMAIL_SUBJECT = "Fort Wilderness Alert"
