@@ -18,7 +18,7 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - run: - run: python checker.py
-  env:
-    SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
-    SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      - run: python checker.py
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
