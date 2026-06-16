@@ -7,7 +7,7 @@ WATCH = {
 }
 
 # AT&T email-to-text address
-EMAIL_TO = "3016978093@txt.att.net"
+EMAIL_TO = "jhorden.lashley@gmail.com"
 
 # Gmail credentials from GitHub Secrets
 SMTP_USERNAME = os.getenv("SMTP_USERNAME")
